@@ -1,15 +1,15 @@
 answer = Object.new
 
 def answer.name_one
-["Mick", "Diana", "Sedgley", "Turny the Turnip", "Rod Stewart", "The Queen", "Donald Trump"]
+name_one_arr = ["Mick", "Diana", "Sedgley", "Turny the Turnip", "Rod Stewart", "The Queen", "Donald Trump"]
 end
 
 def answer.name_two
-["Keith", "Ursula", "Whoopee Goldberg", "Jo Momma", "Bob Stewart", "Fido the dog", "Nancy"]
+name_two_arr = ["Keith", "Ursula", "Whoopee Goldberg", "Jo Momma", "Bob Stewart", "Fido the dog", "Nancy"]
 end
 
 def answer.location
-["The dump", "Jo Momma's house", "Buckingham Palace", "Nando's", "The Ritz", "The park", "The pub"]
+location_arr = ["The dump", "Jo Momma's house", "Buckingham Palace", "Nando's", "The Ritz", "The park", "The pub"]
 end
 
 def answer.activity
@@ -17,71 +17,61 @@ def answer.activity
 end
 
 def answer.suddenly
-["The lights cut out", "The ground began to shake", "The fuselage was ruptured", "A rival crew challenged them to a dance off", "They broke down", "The Queen did a headspin", "The Queen popped a wheelie"]
+suddenly_arr = ["The lights cut out", "The ground began to shake", "The fuselage was ruptured", "A rival crew challenged them to a dance off", "They broke down", "The Queen did a headspin", "The Queen popped a wheelie"]
 end
 
 def answer.thankfully
-["The Queen's jet pack fired back up", "Someone gave them a lift", "They found the missing piece", "They made it to the hospital in time", "They had packed some sandwiches", "The sun came out", "They had some leftovers in the fridge"]
+thankfully_arr = ["The Queen's jet pack fired back up", "Someone gave them a lift", "They found the missing piece", "They made it to the hospital in time", "They had packed some sandwiches", "The sun came out", "They had some leftovers in the fridge"]
 end
 
 def answer.finally
-["They woke up", "The Queen knighted them all", "They got married and lived on a farm", "They started their own business", "Tiny Tim came home", "They joined the circus", "They became good friends"]
-
-sheet = Object.new
-
-def sheet.number(number)
-number
+finally_arr = ["They woke up", "The Queen knighted them all", "They got married and lived on a farm", "They started their own business", "Tiny Tim came home", "They joined the circus", "They became good friends"]
 end
 
-def sheet.writing(writing)
-writing
-end
-
-player_one = answer.new
-sheet_one = sheet.new
-sheet_two = sheet.new
-sheet_three = sheet.new
-sheet_four = sheet.new
+sheet_one = "Sheet One."
+sheet_two = "Sheet Two."
+sheet_three = "Sheet Three."
+sheet_four = "Sheet Four."
 
 puts "Welcome to Consequences! Let's play!"
 puts "Type the name of a person - any person"
-sheet_one.writing = gets + ". "
-sheet_two.writing = answer.name_one.sample + ". "
-sheet_three.writing = answer.name_one.sample + ". "
-sheet_four.writing = answer.name_one.sample + ". "
+sheet_one += gets + " met "
+sheet_two += answer.name_one.sample + " met "
+sheet_three += answer.name_one.sample + " met "
+sheet_four += answer.name_one.sample + " met "
 
 puts "Ok, now type the name of another person"
-sheet_two.writing += gets + ". "
-sheet_three.writing += answer.name_two.sample + ". "
-sheet_four.writing += answer.name_two.sample + ". "
-sheet_one.writing += answer.name_two.sample + ". "
+sheet_two += gets + ". They were  "
+sheet_three += answer.name_two.sample + ". They were  "
+sheet_four += answer.name_two.sample + ". They were  "
+sheet_one += answer.name_two.sample + ". They were  "
 
 puts "Great, now type an activity. In other words, complete the sentence 'They were...'"
-sheet_three.writing += gets + ". "
-sheet_four.writing += answer.activity.sample + ". "
-sheet_one.writing += answer.activity.sample + ". "
-sheet_two.writing += answer.activity.sample + ". "
+sheet_three += gets.downcase + ". Suddenly "
+sheet_four += answer.activity.sample + ". Suddenly "
+sheet_one += answer.activity.sample + ". Suddenly "
+sheet_two += answer.activity.sample + ". Suddenly "
 
 puts "Suddenly...(complete the sentence)"
-sheet_four.writing += gets + ". "
-sheet_one.writing += answer.suddenly.sample + ". "
-sheet_two.writing += answer.suddenly.sample + ". "
-sheet_three.writing += answer.suddenly.sample + ". "
+sheet_four += gets.downcase + ". Thankfully "
+sheet_one += answer.suddenly.sample + ". Thankfully "
+sheet_two += answer.suddenly.sample + ". Thankfully "
+sheet_three += answer.suddenly.sample + ". Thankfully "
 
 puts "Thankfully...(complete the sentence)"
-sheet_one.writing += gets + ". "
-sheet_two.writing += answer.thankfully.sample + ". "
-sheet_three.writing += answer.thankfully.sample + ". "
-sheet_four.writing += answer.thankfully.sample + ". "
+sheet_one += gets.downcase + ". In the end "
+sheet_two += answer.thankfully.sample + ". In the end "
+sheet_three += answer.thankfully.sample + ". In the end "
+sheet_four += answer.thankfully.sample + ". In the end "
 
 puts "In the end...(complete the sentence)"
-sheet_two.writing += gets + ". "
-sheet_three.writing += answer.finally.sample + ". "
-sheet_four.writing += answer.finally.sample + ". "
-sheet_one.writing += answer.finally.sample + ". "
+sheet_two += gets.downcase + ". "
+sheet_three += answer.finally.sample + ". "
+sheet_four += answer.finally.sample + ". "
+sheet_one += answer.finally.sample + ". "
 
 puts "That's it enjoy the stories!"
-puts sheet_one.writing
-puts sheet_two.writing
-puts sheet_three.writing
-puts sheet_four.writing
+puts sheet_one
+puts sheet_two
+puts sheet_three
+puts sheet_four
