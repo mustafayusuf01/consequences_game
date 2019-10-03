@@ -5,7 +5,7 @@ def answer.name_one
 end
 
 def answer.name_two
-["Keith, "Ursula", "Whoopee Goldberg", "Jo Momma", "Bob Stewart", "Fido the dog", "Nancy"]
+["Keith", "Ursula", "Whoopee Goldberg", "Jo Momma", "Bob Stewart", "Fido the dog", "Nancy"]
 end
 
 def answer.location
